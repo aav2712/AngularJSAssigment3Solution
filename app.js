@@ -64,10 +64,10 @@
 				url: "https://davids-restaurant.herokuapp.com/menu_items.json"
 				})
 				.then( function(result){
-					var foundItems = new Array;
+					var foundItems = [];
 					for (i = 0; i < result.data.menu_items.length; i++) {
 						if (result.data.menu_items[i].description.indexOf(searchTerm) != -1) {
-							foundItems.push(result.data.menu_items[i].description + " (" + i + ")");
+							foundItems.push(result.data.menu_items[i]);
 						};
 					};
 					return foundItems;
