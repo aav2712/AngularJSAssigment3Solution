@@ -1,0 +1,8 @@
+<div class="col-xs-12">
+	<ul>
+		<li ng-repeat="item in nidCtrl.found">
+			{{ item }}
+			<button class="btn btn-warning" ng-click="nidCtrl.removeItem({index: $index})">Remove</button>
+		</li>
+	</ul>
+</div>
